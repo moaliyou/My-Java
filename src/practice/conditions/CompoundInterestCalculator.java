@@ -62,13 +62,16 @@ public class CompoundInterestCalculator {
         CompoundInterest annualCompound = new CompoundInterest();
 
         System.out.print("Enter principle amount: ");
-        annualCompound.setPrincipleAmount(input.nextDouble());
+        var principle_amount = input.nextDouble();
+        annualCompound.setPrincipleAmount(principle_amount);
 
         System.out.print("Enter rate: %");
-        annualCompound.setRate(input.nextDouble());
+        var rate = input.nextDouble();
+        annualCompound.setRate(rate);
 
         System.out.print("Enter time in years: ");
-        annualCompound.setTimeInYears(input.nextDouble());
+        var time_in_years = input.nextDouble();
+        annualCompound.setTimeInYears(time_in_years);
 
         System.out.println("\nThe total amount accrued is $" + annualCompound.getAmount());
 
