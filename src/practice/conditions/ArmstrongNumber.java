@@ -17,18 +17,21 @@ public class ArmstrongNumber{
     private static int getArmstrongNumber(int number){
 
         var digitsOfNumber = getNumberOfDigits(number);
-        var result = 0;
+        var resultOfArmstrongNumber = 0;
 
         while (number > 0){
 
+            // getting each digit's value
+            // to calculate the formula
+            // of armstrong number
             var remainder = number % 10;
 
-            result += Math.pow(remainder, digitsOfNumber);
+            resultOfArmstrongNumber += Math.pow(remainder, digitsOfNumber);
 
             number /= 10;
         }
 
-        return result;
+        return resultOfArmstrongNumber;
 
     }
 
