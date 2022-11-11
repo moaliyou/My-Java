@@ -3,8 +3,11 @@ package src.practice.conditions;
 public class PermutationAndCombination {
 
     public static void main(String[] args) {
+
         System.out.println(getPermutationOf(8, 4));
+
         System.out.println(getCombinationOf(8, 4));
+
     }
 
     private static int getCombinationOf(int number, int r) {
