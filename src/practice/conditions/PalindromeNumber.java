@@ -12,6 +12,8 @@ public class PalindromeNumber {
         System.out.print("Enter a number: ");
         var number = scanner.nextInt();
 
+        scanner.close();
+
         if (isPalindrome(number)){
             System.out.printf("%d is palindrome number.\n", number);
             return;
