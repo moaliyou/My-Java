@@ -4,22 +4,25 @@ public class HighestCommonFactor{
 
     public static void main(String[] args) {
         
-        var numOne = 1;
-        var numTwo = 10;
-        // var highestCommonFactor = 1;
+        var numOne = 8;
+        var numTwo = 4;
 
-        // for (int i = 1; i < numOne; i++){
+        System.out.printf("The highest common factor is %d \n", getGreatestCommonDivisorOf(numOne, numTwo));
 
-        //     if ((numOne % i == 0) && (numTwo % i == 0)) {
-        //         if (highestCommonFactor < i) {
-        //             highestCommonFactor = i;
-        //         }
-        //     }
 
-        // }
+    }
 
-        System.out.println(getHighestCommonFactorOf(numOne, numTwo));
+    private static int getGreatestCommonDivisorOf(int numOne, int numTwo){
 
+        var highestCommonFactor = 1;
+
+        for (int i = 1; i <= Math.min(numOne, numTwo); i++) {
+            if (numOne % i == 0 && numTwo % i == 0) {
+                highestCommonFactor = i;
+            }
+        }
+
+        return highestCommonFactor;
 
     }
 
