@@ -5,15 +5,17 @@ public class ArrayOperations {
     public static void main(String[] args) {
         
         int[] arrayOfNums = new int[20];
-        int sizeOfArray = 6;
+        int insertionIndex = 6;
 
-        // printElements(arrayOfNums, sizeOfArray);
+        System.out.println("Before Insertion:");
+        printElements(arrayOfNums, arrayOfNums.length);
 
-        // sizeOfArray = insertSorted(arrayOfNums, 6, 33, sizeOfArray);
+        System.out.println();
 
-        arrayOfNums[sizeOfArray] = 33;
+        insertionIndex = insertSorted(arrayOfNums, insertionIndex, 33, arrayOfNums.length);
 
-        printElements(arrayOfNums, 20);
+        System.out.println("After Insertion:");
+        printElements(arrayOfNums, insertionIndex);
 
     }
 
