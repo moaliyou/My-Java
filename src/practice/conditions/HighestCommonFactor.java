@@ -4,8 +4,8 @@ public class HighestCommonFactor{
 
     public static void main(String[] args) {
         
-        var numOne = 8;
-        var numTwo = 4;
+        var numOne = 50;
+        var numTwo = 65;
 
         System.out.printf("The highest common factor is %d \n", getGreatestCommonDivisorOf(numOne, numTwo));
 
