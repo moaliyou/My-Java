@@ -11,18 +11,20 @@ public class UniqueElement {
         int[] listOfElements = {4, 1, 2, 1, 2};
 
         int index1, index2;
-        int counter = 1;
 
         for (index1 = 0; index1 < listOfElements.length; index1++) {
+
             for (index2 = 0; index2 < listOfElements.length; index2++){
 
                 if (listOfElements[index1] == listOfElements[index2] && index1 != index2)
                     break;
 
             }
+
             if (index2 == listOfElements.length) {
                 System.out.println(listOfElements[index1]);
             }
+
         }
 
 
