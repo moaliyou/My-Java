@@ -8,15 +8,15 @@ public class StringReverse {
 
     public static String getReverseOf(String text){
 
-        String reversed_text = "";
+        String reversedText = "";
 
         for (int index = text.length() - 1; index >= 0; index--) {
 
-            reversed_text += text.charAt(index);
+            reversedText += text.charAt(index);
 
         }
 
-        return reversed_text;
+        return reversedText;
 
     }
 
