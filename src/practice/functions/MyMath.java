@@ -21,8 +21,8 @@ public class MyMath {
     /**
      * A method that sums/adds 2 numbers given by the user
      *
-     * @param num1
-     * @param num2
+     * @param num1 it holds the value of the 1st given number
+     * @param num2 it holds the value of the 2nd given number
      * @return The sum/total of the two given numbers
      */
     static int sumOf(int num1, int num2) {
@@ -32,8 +32,8 @@ public class MyMath {
     /**
      * A method that multiplies 2 numbers
      *
-     * @param num1
-     * @param num2
+     * @param num1 it holds the value of the 1st given number
+     * @param num2 it holds the value of the 2nd given number
      * @return The product of the given 2 numbers
      */
     static int productOf(int num1, int num2) {
