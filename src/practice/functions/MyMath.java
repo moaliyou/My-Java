@@ -1,5 +1,7 @@
 package src.practice.functions;
 
+import java.util.InputMismatchException;
+
 public class MyMath {
 
     public static void main(String[] args) {
@@ -15,6 +17,8 @@ public class MyMath {
         // to calculate the product of
         // the given two numbers
         System.out.println("The product of " + num1 + " and " + num2 + " is " + productOf(num1, num2));
+
+        System.out.println(getFactorialOf(1));
 
     }
 
@@ -38,6 +42,21 @@ public class MyMath {
      */
     static int productOf(int num1, int num2) {
         return (num1 * num2);
+    }
+
+    static int getFactorialOf(int number) {
+        if (number < 0)
+            throw new InputMismatchException("number must be greater than or equal to 0.");
+
+        if (number == 0 || number == 1)
+            return 1;
+
+        int factorialNumber = 1;
+
+        for (int counter = 2; counter <= number; counter++)
+            factorialNumber *= counter;
+
+        return factorialNumber;
     }
 
 }
