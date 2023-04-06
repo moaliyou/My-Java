@@ -12,7 +12,9 @@ public class PlayerToPlayer {
 
     public void start() {
 
-        while (!ticTacToe.hasWon(ticTacToe.getPlayer()) && !ticTacToe.isDraw()) {
+        boolean gameOver = false;
+
+        while (!gameOver) {
 
             ticTacToe.printBoard();
 
@@ -27,13 +29,15 @@ public class PlayerToPlayer {
             }
 
             ticTacToe.makePlayerMove(move);
+            gameOver = ticTacToe.hasPlayerWon(ticTacToe.getPlayer());
 
-            if (ticTacToe.hasWon(ticTacToe.getPlayer())) {
+            if (gameOver) {
                 System.out.println();
                 ticTacToe.printBoard();
                 System.out.println("Player " + ticTacToe.getPlayer() + " has won :)");
 
             } else if (ticTacToe.isDraw()) {
+                gameOver = true;
                 System.out.println();
                 ticTacToe.printBoard();
                 System.out.println("It's draw game :D");

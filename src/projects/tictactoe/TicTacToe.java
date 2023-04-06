@@ -6,24 +6,14 @@ public class TicTacToe {
 
     private final char[][] gameBoard;
     private final int gameBoardSize;
-    private int row;
-    private int col;
-    private int[] rowCount;
-    private int[] colCount;
-    private int diagCount;
-    private int antiDiagCount ;
     private char player;
     private int movesPlayed = 0;
 
     public TicTacToe(int gameBoardSize, char defaultPlayerValue) {
 
         this.gameBoard = new char[gameBoardSize][gameBoardSize];
-        rowCount = new int[gameBoardSize];
-        colCount = new int[gameBoardSize];
-        diagCount = 0;
-        antiDiagCount = 0;
         this.gameBoardSize = gameBoardSize;
-        this.player = defaultPlayerValue;
+        setPlayer(defaultPlayerValue);
 
         createEmptyBoard();
 
@@ -36,29 +26,6 @@ public class TicTacToe {
             Arrays.fill(rowValues, ' ');
 
         }
-
-    }
-
-    public boolean hasWon(char player) {
-        if (gameBoard[row][col] != '\0') {
-            return false;
-        }
-
-        int value = player == 'X' ? 1 : -1;
-        gameBoard[row][col] = player;
-        rowCount[row] += value;
-        colCount[col] += value;
-        if (row == col) {
-            diagCount += value;
-        }
-        if (row == gameBoardSize - col - 1) {
-            antiDiagCount += value;
-        }
-
-        return Math.abs(rowCount[row]) == gameBoardSize ||
-                Math.abs(colCount[col]) == gameBoardSize ||
-                Math.abs(diagCount) == gameBoardSize ||
-                Math.abs(antiDiagCount) == gameBoardSize;
 
     }
 
@@ -84,7 +51,7 @@ public class TicTacToe {
     }
 
     public boolean isDraw() {
-        return (getMovesPlayed() == (Math.pow(getGameBoard().length, 2)));
+        return (getMovesPlayed() == (Math.pow(getGameBoardSize(), 2)));
     }
 
     public void switchPlayerTurn() {
