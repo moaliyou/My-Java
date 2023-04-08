@@ -11,18 +11,25 @@ public class AverageCalculator {
 
         Scanner input = new Scanner(System.in);
         List<Double> listOfNumbers = new ArrayList<>();
-        double num = 0;
 
-        try {
+        while (true) {
 
             System.out.print("Enter a number: ");
-            num = input.nextDouble();
+            String inputValue = input.nextLine();
 
-        } catch (InputMismatchException mismatchException) {
-            System.out.println("Please enter number not text.");
+            if (inputValue.equalsIgnoreCase("done"))
+                break;
+
+            try {
+
+                double number = Double.parseDouble(input.nextLine());
+
+                listOfNumbers.add(number);
+
+            } catch (InputMismatchException mismatchException) {
+                System.out.println("Please enter number not text.");
+            }
         }
-
-        listOfNumbers.add(num);
 
         System.out.println(listOfNumbers);
 
