@@ -14,8 +14,10 @@ public class AverageCalculator {
         double num = 0;
 
         try {
+
             System.out.print("Enter a number: ");
             num = input.nextDouble();
+
         } catch (InputMismatchException mismatchException) {
             System.out.println("Please enter number not text.");
         }
