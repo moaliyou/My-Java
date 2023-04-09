@@ -7,10 +7,16 @@ import java.util.List;
 public class StandardDeviationCalculator {
 
     public static void main(String[] args) {
-        System.out.println(getSampleStandardDeviation(Arrays.asList(3, 7, 2, 10, 5)));
+        System.out.println(getSampleStandardDeviation(Arrays.asList(2, 4, 6, 8, 9)));
     }
 
     private static double getSampleStandardDeviation(List<Integer> listOfNumbers) throws NullPointerException {
+
+        if (listOfNumbers == null)
+            throw new NullPointerException("Please try to initialise your list.");
+
+        if (listOfNumbers.size() == 0)
+            return 0;
 
         int numbersLength = listOfNumbers.size();
 
@@ -25,7 +31,7 @@ public class StandardDeviationCalculator {
         double mean = getMean(listOfNumbers);
 
         for (int number : listOfNumbers)
-            sumOfSquaredDeviations += Math.pow((number - mean), 2);
+            sumOfSquaredDeviations += Math.pow((number - mean), 2.0);
 
         return sumOfSquaredDeviations;
     }
