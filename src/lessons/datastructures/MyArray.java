@@ -27,12 +27,18 @@ public class MyArray {
         // we've to initialize it
         long[] elementsList = {2, 34, 5, 6, 23, 43, 1, 9};
 
-        // To traverse `elementsList`
+        // Traversing all elements in `elementsList`
         // it takes O(n) time complexity
-//        showElements(elementsList);
+        showElements(elementsList);
 
-        System.out.println(getMinMax(elementsList, elementsList.length).toString());
-        System.out.println(Arrays.toString(deleteElement(elementsList, 3)));
+        // Removing an element
+        // in the `elementsList`
+        // it takes O(n) time complexity
+        // with O(n) auxiliary space
+        System.out.println(Arrays.toString(deleteElement(elementsList, 5)));
+
+        // Getting the maximum and minimum element
+        System.out.println(getMinMax(elementsList, elementsList.length));
 
     }
 
@@ -43,9 +49,7 @@ public class MyArray {
 
         for (int i = 0, j = 0; i < elementsLength; i++) {
 
-            if (i == elementPosition - 1) {
-                continue;
-            } else {
+            if (!(i == elementPosition - 1)) {
                 newElementsList[j++] = elements[i];
             }
 
@@ -62,9 +66,9 @@ public class MyArray {
         return new pair(a[0], a[(int) (n - 1)]);
     }
 
-    protected static void showElements(int[] elementsList) {
+    protected static void showElements(long[] elementsList) {
 
-        for (int element : elementsList)
+        for (long element : elementsList)
             System.out.println(element);
 
     }
