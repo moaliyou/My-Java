@@ -32,6 +32,26 @@ public class MyArray {
 //        showElements(elementsList);
 
         System.out.println(getMinMax(elementsList, elementsList.length).toString());
+        System.out.println(Arrays.toString(deleteElement(elementsList, 3)));
+
+    }
+
+    protected static long[] deleteElement(long[] elements, int elementPosition) {
+
+        int elementsLength = elements.length;
+        long[] newElementsList = new long[elementsLength - 1];
+
+        for (int i = 0, j = 0; i < elementsLength; i++) {
+
+            if (i == elementPosition - 1) {
+                continue;
+            } else {
+                newElementsList[j++] = elements[i];
+            }
+
+        }
+
+        return newElementsList;
 
     }
 
