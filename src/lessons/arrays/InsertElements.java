@@ -6,8 +6,8 @@ public class InsertElements {
 
     public static void main(String[] args) {
 
-        int[] nums = {1,2,3,4,0};
-        int[] index = {0,1,2,3,0};
+        int[] nums = {1, 2, 3, 4, 0};
+        int[] index = {0, 1, 2, 3, 0};
 
         System.out.println(
                 Arrays.toString(
@@ -21,7 +21,7 @@ public class InsertElements {
 
     }
 
-    private static void insertElementAt(int arr[], int position, int value) {
+    private static void insertElementAt(int[] arr, int position, int value) {
         int counterLength = arr.length;
 
         for (int i = counterLength - 1; i > position; i--)
