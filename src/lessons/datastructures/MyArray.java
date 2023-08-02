@@ -8,6 +8,7 @@ final class pair {
     private final long minimumValue;
 
     public pair(long minimumValue, long maximumValue) {
+        // initializing data variables
         this.minimumValue = minimumValue;
         this.maximumValue = maximumValue;
     }
