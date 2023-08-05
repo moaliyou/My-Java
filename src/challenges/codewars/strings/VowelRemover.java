@@ -6,6 +6,24 @@ public class VowelRemover {
         System.out.println(removeAllVowels("This website is for losers LOL!"));
     }
 
+    /**
+     * Removes vowels from the given text.
+     *
+     * This method takes a string input 'text' and returns a new string with all the vowels (both lowercase and uppercase)
+     * removed. Vowels are the letters 'a', 'e', 'i', 'o', and 'u' (both uppercase and lowercase). The method iterates through
+     * each character in the 'text' and checks if it is a vowel using the helper method 'isVowel'. If the character is not a vowel,
+     * it is appended to a StringBuilder to form the result string. The final result is a string containing all non-vowel characters
+     * from the original 'text'.
+     *
+     * @param text The input text from which vowels are to be removed.
+     * @return A new string with all vowels removed from the original text.
+     *
+     * @throws NullPointerException If the 'text' parameter is null.
+     *
+     * @see java.lang.StringBuilder
+     * @see Character#toLowerCase(char)
+     * @see Character#toUpperCase(char)
+     */
     private static String removeVowel(String text) {
         StringBuilder stringBuilder = new StringBuilder();
 
@@ -26,9 +44,7 @@ public class VowelRemover {
      *
      * @param text The input text from which vowels are to be removed.
      * @return A new string with all vowels removed from the original text or an empty string if the 'text' is null.
-     *
-     * @example
-     * String text = "Hello, Java!";
+     * @example String text = "Hello, Java!";
      * String result = removeAllVowels(text);
      * // The 'result' will be "Hll, Jv!"
      *
